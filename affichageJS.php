@@ -3,7 +3,7 @@
 ?>
 <br/><h2>Liste dynamique des plantes de la base de donnees !</h2><br/>
 <form method='POST' id="afficher">
-    <label>Recherche : </label><input type='text' id='recherche' name='recherche'/>
+    <label>Recherche : </label><input type='text' placeholder="Vide pour tout afficher" id='recherche' name='recherche'/>
     <button type="submit">Afficher les données</button>
 </form>
 <br/>
