@@ -7,7 +7,7 @@ if (isset($_SESSION['login'])){ // Si l utilisateur est authentifie il peut supp
 
     $req = $bdd->prepare('DELETE FROM releves WHERE id=:id');
     $req->execute(array(
-	       'id' => $_REQUEST['id_do'], // id_do ? 
+	       'id' => $_REQUEST['id_do'], // id_do est un hidden pour chaque bouton supprimer
        ));
     echo "Suppression effectuée";
 

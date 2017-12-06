@@ -5,7 +5,7 @@
     $requete='SELECT * from releves';  /*On prepare une requete permettant de recupere l'ensemble de la table releves */
     $value=requete($bd,$requete); /* value recupere la reponse de la requete */
     echo "<div>";
-    echo "</br><h2>Liste non dynamique des plantes de la base de donnees !</h2></br>";
+    echo "<br/><h2>Liste non dynamique des plantes de la base de donnees !</h2><br/>";
     echo "<table>
                 <tr>
                     <th> ID </th>
@@ -30,7 +30,7 @@
         }
         echo "</tr>";
     }
-    echo "</table></div></br>";
+    echo "</table></div><br/>";
 
     include 'html/pied.html'; /*On ferme la page html avec le footer */
 ?>

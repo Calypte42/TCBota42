@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', function() {
             var ret = JSON.parse(data.target.responseText); // le resultat de la requete sous forme de tableau
             var new_html = '';
             if (ret.releves.length == 0) {
-                new_html += 'Pas de données disponibles';
+                new_html += '<br/>Pas de données disponibles';
                 document.querySelector('#listing').innerHTML = new_html; //reference la div dont id=listing sur affichageJS
             } else {
-                new_html += '<div></br>';
+                new_html += '<div><br/>';
                 new_html += '<table>';
                 new_html += '<tr>';
                 new_html += '<th> ID </th>';
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     new_html += '</form></td>';
                     new_html += '</tr>';
                 }
-                new_html += '</table></div></br>';
+                new_html += '</table></div><br/>';
                 document.querySelector('#listing').innerHTML = new_html;
 
                 var supprimer = document.getElementsByClassName('suppression'); // on ajoute aux boutons supprimer leurs fonctions
@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (login=="") { // si le webservice n'a rien envoye on redemande le login et le mot de passe
                     new_html += "Mauvais mom d'utilisateur ou mot de passe";
                     new_html += "<form method='POST' id='connexion'>";
-                    new_html +=    "<input type='text' placeholder='Login'name='login' id='login' /></br>";
-                    new_html +=    "<input type='password' placeholder='Mot de passe' name='mdp' id='mdp' /></br>";
+                    new_html +=    "<input type='text' placeholder='Login'name='login' id='login' /><br/>";
+                    new_html +=    "<input type='password' placeholder='Mot de passe' name='mdp' id='mdp' /><br/>";
                     new_html +=    "<input type='submit' value='Se connecter' />";
                     new_html += "</form>";
                     document.querySelector('#authentification').innerHTML = new_html;
@@ -126,8 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
             request.addEventListener('load', function(data) {
                 new_html = "Identification : ";
                 new_html += "<form method='POST' id='connexion'>";
-                new_html +=    "<input type='text' placeholder='Login' name='login' id='login' /></br>";
-                new_html +=    "<input type='password'placeholder='Mot de passe' name='mdp' id='mdp' /></br>";
+                new_html +=    "<input type='text' placeholder='Login' name='login' id='login' />";
+                new_html +=    "<input type='password'placeholder='Mot de passe' name='mdp' id='mdp' />";
                 new_html +=    "<input type='submit' value='Se connecter' />";
                 new_html += "</form>";
                 document.querySelector('#authentification').innerHTML = new_html;
@@ -143,6 +143,13 @@ document.addEventListener('DOMContentLoaded', function() {
         form.addEventListener("submit", function(event) {
             event.preventDefault();
             liste();
+            var valeurRecherche = document.getElementById('recherche');
+            valeur = valeurRecherche.value
+            new_html = "";
+            if (valeur != ""){
+                new_html += "Résultats de la recherche pour : "+valeur;
+            }
+            document.querySelector('#messageRecherche').innerHTML = new_html;
         });
     }
 

@@ -43,9 +43,9 @@ session_start()
                             <input type='submit' class='Connexion' value='Se déconnecter' />
                             </form>";
                     } else {
-                        echo 'Identification : </br><form method="POST" id="connexion">
-                            <input type="text" placeholder="Login" name="login" id="login" /></br>
-                            <input type="password" placeholder="Mot de passe" name="mdp" id="mdp" /></br>
+                        echo 'Identification : <br/><form method="POST" id="connexion">
+                            <input type="text" placeholder="Login" name="login" id="login" /><br/>
+                            <input type="password" placeholder="Mot de passe" name="mdp" id="mdp" /><br/>
                             <input type="submit"  class="Connexion" value="Se connecter" />
                         </form>';
                     }
