@@ -1,0 +1,217 @@
+/* Parametre de base la feuille de style */
+
+*{ /* On reinitialise les valeurs des marges et des padding */
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    position: relative;
+    min-height: 90%;
+    background-color: #80C25F;
+    text-align: center;
+    padding-bottom: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+header{
+    border-width: medium;
+    border-color: black;
+    border-style: groove;
+    height: 185px;
+}
+
+#authentification{
+    position: absolute;
+    right: 2%;
+    top:3px;
+    /*border-color: blue;
+    border-style:solid;
+    border-radius: 10px;
+    border-width:thin;*/
+    padding: 2px;
+    font-size: 14px;
+    max-width:200px;
+}
+
+
+#authentification input{
+    height: 22px;
+    max-width: 170px;
+    font-size: 12px;
+}
+
+#login,#mdp{
+    max-height: 12px;
+}
+
+
+#menuSelect li{
+    display:inline-block ;
+    font-size: 30px;
+}
+
+
+header h1 {
+    text-align: center;
+    color: #F5314B;
+    font-size: 80px;
+}
+
+#image2Menu {
+    display: inline-block;
+    float:right;
+}
+
+#image1Menu{
+    display: inline-block;
+    float: left;
+}
+
+#pagePrincipale{
+    margin: 0 auto;
+    position: relative;
+}
+
+footer{ /* On fixe le pied de page en bas de la page quoiqu'il arrive */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+}
+
+.imagePlante{
+    width: 100px;
+    height: 100px;
+}
+
+table{
+    margin: auto;
+    border-collapse: collapse;
+    font-weight: bold;
+    opacity: 1;
+    background-color: #E8E8E8;
+}
+
+
+th,td{
+    border: 1px solid black;
+    padding: 2px;
+}
+
+.formulaire{
+    border-style: solid;
+    border-color: black;
+    border-width: thin;
+    text-align: center;
+    padding: 2%;
+
+}
+
+
+#ajout fieldset{
+    text-align: left
+
+}
+
+#ajout legend{
+    margin-left: 40%;
+}
+
+fieldset label{
+    margin-left: 35%;
+    text-align: left;
+}
+
+fieldset input{
+    padding-left: 1%;
+}
+
+@media all and (max-width:900px){ /* S'applique en dessous de 900 px */
+    table{
+        max-width: 720px;
+        font-size: 12px;
+    }
+
+    .imagePlante{
+        width: 50px;
+        height: 50px;
+    }
+
+    #pagePrincipale,footer{
+        font-size: 16px;
+    }
+
+
+
+
+}
+
+@media all and (max-width:750px){ /* S'applique en dessous de 725 px */
+
+    table{
+        max-width: 720px;
+        font-size: 10px;
+    }
+
+    #authentification{
+        border-style: none;
+        padding: 1px;
+        font-size: 12px;
+        max-width:180px;
+    }
+
+
+    #authentification input{
+        height: 20px;
+        max-width: 140px;
+        font-size: 8px;
+    }
+
+    #login,#mdp{
+        max-height: 10px;
+    }
+
+    .enlevable{ /* On enleve les photos du tableau */
+        display: none;
+    }
+
+
+    #pagePrincipale,footer{
+        font-size: 15px;
+    }
+
+    #menuSelect li{
+        display:block ;
+        font-size: 20px;
+    }
+
+    header{
+        height: 163px;
+    }
+
+    header h1 {
+        text-align: center;
+        color: #F5314B;
+        font-size: 60px;
+    }
+
+    fieldset label{
+        margin-left: 2%;
+        text-align: left;
+    }
+
+
+}
+
+
+
+
+
+}
