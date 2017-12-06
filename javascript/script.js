@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         request.addEventListener('load', function(data) { // quand la requete est effectue
             window.alert(data.target.responseText); // on affiche la reponse du webservice dans une pop-up
             liste(); //et on affiche la liste actualise
+            document.querySelector('#messageRecherche').innerHTML = ""
         });
         request.open("POST", "php/delete_donnees.php");
         request.send(new FormData(formulaire));
